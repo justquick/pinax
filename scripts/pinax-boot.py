@@ -808,7 +808,7 @@ def install_python(home_dir, lib_dir, inc_dir, bin_dir, site_packages, clear):
         except:
             logger.fatal(
                 "Could not call install_name_tool -- you must have Apple's development tools installed")
-            raise
+            sys.exit(3)
 
         # Some tools depend on pythonX.Y being present
         py_executable_version = '%s.%s' % (
